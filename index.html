@@ -6,5 +6,24 @@
   </head>
   <body>
     <h1>Hello World</h1>
+    
+    
+    <div>
+  <button type="randomFood">Foods</button>
+  <input "randomFood" id="randomFood">
+  </div>
+    
+    
+    
+  <script>
+    const foods = ["Jap", "Chinese", "HK", "Spain", "US", "Eng"];
+
+    function findFood() {
+    let randomIndex = Math.floor(Math.random() * foods.length);
+    document.getElementById("randomFood").setAttribute("value", foods[randomIndex]);
+}
+</script>
+    
+    
   </body>
 </html>
