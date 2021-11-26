@@ -62,6 +62,7 @@ function showError(error) {
     function findFood() {
     let randomIndex = Math.floor(Math.random() * foods.length);
     document.getElementById("randomFood").setAttribute("value", foods[randomIndex]);
+        showPosition();
 }
     
   
