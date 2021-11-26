@@ -15,12 +15,23 @@
   <script>
     const foods = ["中式","韓式","西式","魚","豬","麵包","龍蝦","健康菜","家常菜","小炒","小食","意粉","意大利飯","日式","東南亞菜","海鮮"];
 
-    function findFood() {
+    function getLocation() {
     let randomIndex = Math.floor(Math.random() * foods.length);
     document.getElementById("randomFood").setAttribute("value", foods[randomIndex]);
 }
     
-    
+    var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
     
  
 </script>
