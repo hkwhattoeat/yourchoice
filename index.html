@@ -49,6 +49,24 @@ function showError(error) {
 </script>
 </head>
 <body>
+     <h1 style="font-size:80px;">今日食乜餸</h1>
+     
+    <div>
+  <button onclick="findFood();" type="randomFood" style="font-size:60px;">食乜好</button>
+  <input "randomFood" id="randomFood" style="font-size:60px;" />
+</div>
+    
+  <script>
+    const foods = ["中式","韓式","西式","魚","豬","麵包","龍蝦","健康菜","家常菜","小炒","小食","意粉","意大利飯","日式","東南亞菜","海鮮"];
+
+    function findFood() {
+    let randomIndex = Math.floor(Math.random() * foods.length);
+    document.getElementById("randomFood").setAttribute("value", foods[randomIndex]);
+}
+    
+  
+</script>
+
     <button type="button" onclick="showPosition();">Show My Position on Google Map</button>
     <div id="embedMap" style="width: 400px; height: 300px;">
         <!--Google map will be embedded here-->
